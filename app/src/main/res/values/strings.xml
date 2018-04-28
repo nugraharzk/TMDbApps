@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TMDb Apps</string>
+    <string name="title">Judul Disini</string>
+    <string name="overview">Overwiew Disini</string>
+
+    <string name="api_key">16ca32f03b6943a2e4c893b7ea87276b</string>
+    <string name="poster_base">http://image.tmdb.org/t/p/w200</string>
+</resources>
