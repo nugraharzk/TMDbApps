@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 movieResponse = response.body();
                 Log.d(TAG, "onResponse: "+response.body().getMovieList());
                 movieList = movieResponse.getMovieList();
-                adapter = new RecyclerAdapter(getBaseContext(), movieList);
+                adapter = new RecyclerAdapter(getApplicationContext(), movieList);
                 recyclerView.setAdapter(adapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false));
                 recyclerView.addItemDecoration(new DividerItemDecoration(getBaseContext(), LinearLayoutManager.VERTICAL));
