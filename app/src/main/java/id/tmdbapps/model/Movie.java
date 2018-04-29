@@ -2,15 +2,16 @@ package id.tmdbapps.model;
 
 public class Movie {
 
-    private String title, overview, poster_path;
+    private String title, overview, poster_path, vote_average;
 
     public Movie() {
     }
 
-    public Movie(String title, String overview, String poster_path) {
+    public Movie(String title, String overview, String poster_path, String vote_average) {
         this.title = title;
         this.overview = overview;
         this.poster_path = poster_path;
+        this.vote_average = vote_average;
     }
 
     public String getTitle() {
@@ -35,5 +36,13 @@ public class Movie {
 
     public void setPoster_path(String poster_path) {
         this.poster_path = poster_path;
+    }
+
+    public String getVote_average() {
+        return vote_average;
+    }
+
+    public void setVote_average(String vote_average) {
+        this.vote_average = vote_average;
     }
 }

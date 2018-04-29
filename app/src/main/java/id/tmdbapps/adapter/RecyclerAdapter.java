@@ -1,6 +1,5 @@
 package id.tmdbapps.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -31,10 +30,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView poster;
-        TextView title, overview;
+        TextView average, title, overview;
 
         MyViewHolder(View itemView) {
             super(itemView);
+            average = itemView.findViewById(R.id.average);
             poster = itemView.findViewById(R.id.poster);
             title = itemView.findViewById(R.id.title);
             overview = itemView.findViewById(R.id.overview);
@@ -54,6 +54,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Movie movie = movieList.get(position);
 
+        holder.average.setText("Ratings " + movie.getVote_average() + " of 10");
         holder.title.setText(movie.getTitle());
         holder.overview.setText(movie.getOverview());
         Glide.with(context).load("http://image.tmdb.org/t/p/w200"+movie.getPoster_path()).into(holder.poster);
